@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block link %}
+    <link rel = "stylesheet" href = "../static/css/note_add.css" >
+{% endblock %}
+
+{% block content %}
+<h1 class="h1">{{_("Добавить заметку")}}</h1>
+<form action="/add_message" method="post">
+    <table class="add_note">
+        <tr>
+            <td>
+                <label for="text">{{_("Текст")}}</label>
+                <input type="text" name="text" placeholder="{{_("Текст")}}"/>
+            </td>
+        </tr>
+        <tr>
+        <tr>
+            <td>
+                <label for="date_time">{{_("Окончание работы (срок)")}}</label>
+                <input type="date" name="end_date" placeholder="{{_("Окончание работы (срок)")}}"><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" class="sumbit_link btn_add_note">{{_("Добавить заметку")}}</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <ul class=flashes>
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endwith %}
+            </td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block link %}
+    <link rel = "stylesheet" href = "../static/css/login-register.css" >
+{% endblock %}
+
+{% block content %}
+
+<div class="login_block">
+    <div class="container">
+        <div class="block_login">
+            <form method="POST">
+                <table class="table">
+                    <tr>
+                        <td><h1 class="h1">{{_("Регистрация")}}</h1></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="first_name" class="fist_name" placeholder="{{_("Имя")}}"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="last_name" class="last_name" placeholder="{{_("Фамилия")}}"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="login" class="login" placeholder="{{_("Логин")}}"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="email" class="Email" placeholder="Email"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" name="password" class="password" placeholder="{{_("Пароль")}}"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" name="password2" class="password" placeholder="{{_("Подвердить")}}"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="{{_("Регистрация")}}" class="sumbit_link btn_post">
+                            <a href="{{ url_for('login_page') }}" class="sumbit_link regis">{{_("Войти")}}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% with messages = get_flashed_messages() %}
+                              {% if messages %}
+                                <ul class=flashes>
+                                {% for message in messages %}
+                                  <li>{{ message }}</li>
+                                {% endfor %}
+                                </ul>
+                              {% endif %}
+                            {% endwith %}
+                            {% block body %}{% endblock %}
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

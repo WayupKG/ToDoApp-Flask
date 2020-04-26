@@ -1,0 +1,25 @@
+.add_note {
+    margin: auto;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+input {
+    color: #562E70;
+    width: 350px;
+    padding: 10px;
+    font-size: 17px;
+}
+
+.btn_add_note {
+    margin-top: 20px;
+    cursor: pointer !important;
+}

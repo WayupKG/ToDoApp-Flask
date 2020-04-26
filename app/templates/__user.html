@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/__user.css") }}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="div_grid user{{ user.id }}">
+        <div class="profil">
+            <div class="avatar">
+                <img src="{{ user.avatar }}" alt="">
+            </div>
+            <div class="info">
+                <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+                <p>{{ user.email }}</p>
+                <p>{{ user.status }}</p>
+            </div>
+        </div>
+        <div class="QR">
+            <img src="{{ url_for("static", filename="img/QR-CODE/") }}{{ user.username }}.png" alt="">
+        </div>
+    </div>
+    <hr>
+    <div class="Achievements">
+        <div class="block1">
+            <img src="{{ url_for("static", filename="img/") }}{{ user.username }}3.png" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

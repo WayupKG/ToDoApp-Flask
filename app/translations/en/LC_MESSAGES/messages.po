@@ -1,0 +1,259 @@
+# English translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-04-10 17:04+0600\n"
+"PO-Revision-Date: 2020-04-10 16:00+0600\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: app/routes.py:48
+msgid "Text не заполнен"
+msgstr "Text is not filled"
+
+#: app/routes.py:50 app/routes.py:95
+msgid "Окончание работы не установлен"
+msgstr "End of work is not installed"
+
+#: app/routes.py:91
+msgid "ID не заполнен"
+msgstr "ID is not filled"
+
+#: app/routes.py:93
+msgid "Текст не заполнен"
+msgstr "The text is not filled"
+
+#: app/routes.py:104
+msgid "Такой ID Нет "
+msgstr "No such ID"
+
+#: app/routes.py:106
+msgid "Извените, на вашем заметке такой ID нет "
+msgstr "Sorry, there is no such ID on your note"
+
+#: app/routes.py:153
+msgid "Напишите имю"
+msgstr "Write name"
+
+#: app/routes.py:155
+msgid "Напишите фамилию"
+msgstr "Write last name"
+
+#: app/routes.py:157
+msgid "Напишите email"
+msgstr "Write email"
+
+#: app/routes.py:161
+msgid "Нет такого пользователя"
+msgstr "No such user"
+
+#: app/routes.py:258
+msgid "Неверный логин или пароль"
+msgstr "wrong login or password"
+
+#: app/routes.py:261
+msgid "Пожалуйста, заполните поля логин и пароль"
+msgstr "Please fill in the username and password fields"
+
+#: app/routes.py:297
+msgid "Пожалуйста заполните все поля!"
+msgstr "Please fill in all fields!"
+
+#: app/routes.py:300
+msgid "Такой логин уже есть"
+msgstr "This username is already there"
+
+#: app/routes.py:303
+msgid "Пароли не равны!"
+msgstr "Passwords are not equal!"
+
+#: app/templates/404.html:5
+msgid "Страница 404"
+msgstr "Page 404"
+
+#: app/templates/_all_notes.html:9 app/templates/profil_page.html:27
+msgid "Все заметки"
+msgstr "All notes"
+
+#: app/templates/_all_notes.html:14 app/templates/_did.html:14
+#: app/templates/_not_done.html:14 app/templates/_pending.html:14
+#: app/templates/_work.html:14 app/templates/note_page.html:13
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/_all_notes.html:15 app/templates/_did.html:15
+#: app/templates/_not_done.html:15 app/templates/_pending.html:15
+#: app/templates/_work.html:15 app/templates/note_page.html:14
+msgid "Наимование"
+msgstr "Hiring"
+
+#: app/templates/_all_notes.html:16 app/templates/_did.html:16
+#: app/templates/_not_done.html:16 app/templates/_pending.html:16
+#: app/templates/_work.html:16 app/templates/note_page.html:15
+msgid "Создан"
+msgstr "Created by"
+
+#: app/templates/_all_notes.html:17 app/templates/_did.html:17
+#: app/templates/_not_done.html:17 app/templates/_pending.html:17
+#: app/templates/_work.html:17 app/templates/note_page.html:16
+#: app/templates/update_note.html:20
+msgid "Срок"
+msgstr "Term"
+
+#: app/templates/_all_notes.html:18 app/templates/_did.html:18
+#: app/templates/_not_done.html:18 app/templates/_pending.html:18
+#: app/templates/_work.html:18 app/templates/note_page.html:17
+#: app/templates/update_note.html:21
+msgid "Статус"
+msgstr "Status"
+
+#: app/templates/_did.html:9 app/templates/profil_page.html:32
+msgid "Сделанные"
+msgstr "Made"
+
+#: app/templates/_lenta.html:4
+msgid "Лента"
+msgstr "Tape"
+
+#: app/templates/_my_data.html:7 app/templates/profil_page.html:22
+msgid "Мои данные"
+msgstr "My details"
+
+#: app/templates/_my_data.html:27 app/templates/update_note.html:51
+msgid "Обновить"
+msgstr "Update"
+
+#: app/templates/_not_done.html:9 app/templates/profil_page.html:47
+msgid "Не сделанные"
+msgstr "Not done"
+
+#: app/templates/_pending.html:9 app/templates/update_note.html:39
+msgid "В ожидании"
+msgstr "Pending"
+
+#: app/templates/_users.html:9 app/templates/profil_page.html:52
+msgid "Пользователи"
+msgstr "Users"
+
+#: app/templates/_work.html:9 app/templates/profil_page.html:37
+#: app/templates/update_note.html:38
+msgid "Работаю"
+msgstr "I work"
+
+#: app/templates/base.html:28 app/templates/index.html:7
+#: app/templates/update_note.html:12
+msgid "Главная"
+msgstr "Home"
+
+#: app/templates/base.html:29 app/templates/update_note.html:12
+msgid "Заметки"
+msgstr "Notes"
+
+#: app/templates/base.html:30 app/templates/note_add.html:7
+#: app/templates/note_add.html:25
+msgid "Добавить заметку"
+msgstr "Add note"
+
+#: app/templates/base.html:35 app/templates/profil_page.html:8
+msgid "Профиль"
+msgstr "Profile"
+
+#: app/templates/base.html:36
+msgid "Выйти"
+msgstr "Logout"
+
+#: app/templates/base.html:40 app/templates/login.html:26
+#: app/templates/register.html:37
+msgid "Войти"
+msgstr "Sign In"
+
+#: app/templates/index.html:18
+msgid "Коди Руй"
+msgstr "Cody Ruy"
+
+#: app/templates/index.html:21
+msgid ""
+"Я работаю, работаю и работы не боюсь, если правый бок устанет - я на "
+"левый повернусь!"
+msgstr ""
+"I work, work and I’m not afraid of work, if the right side gets tired - I"
+" will turn to the left!"
+
+#: app/templates/index.html:24 app/templates/note_page.html:9
+msgid "Мои заметки"
+msgstr "My notes"
+
+#: app/templates/index.html:26 app/templates/login.html:27
+#: app/templates/register.html:14 app/templates/register.html:36
+msgid "Регистрация"
+msgstr "Sign Up"
+
+#: app/templates/login.html:16
+msgid "Авторизоваться"
+msgstr "Sign In"
+
+#: app/templates/login.html:19 app/templates/register.html:23
+msgid "Логин"
+msgstr "Login"
+
+#: app/templates/login.html:22 app/templates/register.html:29
+msgid "Пароль"
+msgstr "Password"
+
+#: app/templates/note_add.html:12 app/templates/note_add.html:13
+msgid "Текст"
+msgstr "Text"
+
+#: app/templates/note_add.html:19 app/templates/note_add.html:20
+msgid "Окончание работы (срок)"
+msgstr "End of work (term)"
+
+#: app/templates/note_page.html:30 app/templates/note_page.html:47
+#: app/templates/note_page.html:64 app/templates/note_page.html:81
+#: app/templates/profil_page.html:57 app/templates/update_note.html:15
+msgid "Редактировать"
+msgstr "Edit note"
+
+#: app/templates/profil_page.html:42
+msgid "В Ожидании"
+msgstr "Pending"
+
+#: app/templates/register.html:17
+msgid "Имя"
+msgstr "Name"
+
+#: app/templates/register.html:20
+msgid "Фамилия"
+msgstr "Surname"
+
+#: app/templates/register.html:32
+msgid "Подвердить"
+msgstr "Confirm Password"
+
+#: app/templates/update_note.html:19
+msgid "Называние заметки"
+msgstr "Title of note"
+
+#: app/templates/update_note.html:37
+msgid "Сделан"
+msgstr "Made"
+
+#: app/templates/update_note.html:40
+msgid "Не сделан"
+msgstr "Not done"
+
+#: app/templates/update_note.html:54
+msgid "Удалить"
+msgstr "Delete"
+

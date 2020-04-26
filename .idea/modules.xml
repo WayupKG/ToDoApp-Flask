@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ITDA.iml" filepath="$PROJECT_DIR$/.idea/ITDA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TITI/.idea/TITI.iml" filepath="$PROJECT_DIR$/../TITI/.idea/TITI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../online_test/.idea/online_test.iml" filepath="$PROJECT_DIR$/../online_test/.idea/online_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sneaky_pro/.idea/sneaky_pto.iml" filepath="$PROJECT_DIR$/../sneaky_pro/.idea/sneaky_pto.iml" />
+    </modules>
+  </component>
+</project>

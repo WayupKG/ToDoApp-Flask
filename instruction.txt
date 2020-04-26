@@ -1,0 +1,31 @@
+Чтобы запустить программу вам необходимо сделать следующее: || To run the program you need to do the following:
+
+! Все команды надо написать на терминале || All commands must be written on the terminal
+
+1) Установить виртуальное окружение || Set virtual environment
+ >>> python3 -m venv и имя папки
+
+2) Активировать виртуальную окружению || Activate virtual environment
+ >>> source имя_папки/bin/activate
+
+3) И скачать все необходимые зависимости || And download all the necessary dependencies
+ >>> pip3 install -r requirements.txt
+
+4) export FLASK_APP=start.py
+
+5) export FLASK_DEBUG=1
+
+6) flask run
+
+
+!!! после изменения кода вам не обязательно перезагрузить сервер !!!
+
+!!! Просто измените код и сохраните а сервер сам перезагружается,
+    потом вам необходимо перезагрузить только сайт !!!
+
+
+
+!!! after changing the code, you do not have to restart the server !!!
+
+!!! Just change the code and save and the server will reboot itself,
+    then you need to reload only the site !!!

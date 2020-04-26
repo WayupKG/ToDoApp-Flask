@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block link %}
+        <link rel = "stylesheet" href = "{{ url_for("static", filename="css/update_note.css") }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="update_main">
+    <div class="container">
+        <div class="link_back">
+            <a href="{{ url_for("index")}}">{{_("Главная")}}</a> / <a href="{{ url_for("note_page") }}">{{_("Заметки")}}</a>
+        </div>
+        <div class="block_update">
+            <h1 class="h1">{{_("Редактировать")}}</h1>
+            <form method="POST">
+                <table>
+                    <tr>
+                        <th class="text_new">{{_("Называние заметки")}}</th>
+                        <th class="new_work">{{_("Срок")}}</th>
+                        <th class="end_work">{{_("Статус")}}</th>
+                    </tr>
+                    <tr>
+
+                        <td>
+                             <textarea name="text_update" cols="40" rows="3" >{{ note.text }}</textarea>
+                        </td>
+
+                        <td>
+                            <input type="date" name="end_date_update" class="end_date_update" value="{{ note.end_date }}">
+                        </td>
+
+                        <td>
+                            <div class="custom-select" style="width:200px; margin: auto;">
+                              <select name="status_select">
+                                <option value="{{ note.status }}">{{ note.status }}</option>
+                                <option value="{{_("Сделан")}}">{{_("Сделан")}}</option>
+                                <option value="{{_("Работаю")}}">{{_("Работаю")}}</option>
+                                <option value="{{_("В ожидании")}}">{{_("В ожидании")}}</option>
+                                <option value="{{_("Не сделан")}}">{{_("Не сделан")}}</option>
+                              </select>
+                            </div>
+                        </td>
+
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="number" name="note_id" value="{{ note.id }}" style="display: none">
+                            <button type="submit" class="btn_update sumbit_link" name="btn" value="update">{{_("Обновить")}}</button>
+                        </td>
+                        <td>
+                            <button type="submit" class="btn_update sumbit_link" name="btn" value="remove">{{_("Удалить")}}</button>
+                        </td>
+                    </tr>
+                </table>
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <ul class=flashes>
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endwith %}
+            </form>
+        </div>
+    </div>
+</div>
+    <script src="{{ url_for("static", filename="js/select_status.js") }}"></script>
+{% endblock %}

@@ -1,0 +1,29 @@
+.main {
+    display: block;
+    width: 100%;
+    height: 86%;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    background: url("../img/bac-img.png");
+    background-size: cover;
+}
+
+.block1 {
+    width: 40%;
+}
+
+.block1 h1 {
+    font-size: 12vh;
+    font-family: 'Noto Serif', bold, serif;
+    font-weight: 700;
+    color: #562E70;
+}
+
+.block1 p {
+    color: #562E70;
+    margin-bottom: 40px;
+}

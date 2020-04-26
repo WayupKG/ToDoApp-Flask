@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block link %}
+    <link rel = "stylesheet" href = "{{ url_for("static", filename="css/note_page.css") }}" >
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="h1">{{_("Мои заметки")}}</h1>
+<form method="post" >
+    <table class="table">
+        <tr>
+            <th class="id_note"><span>{{ _('ID') }}</span></th>
+            <th class="name_text"><span>{{ _('Наимование') }}</span></th>
+            <th class="data"><span>{{ _('Создан') }}</span></th>
+            <th class="data"><span>{{ _('Срок') }}</span></th>
+            <th class="stst"><span>{{ _('Статус') }}</span></th>
+        </tr>
+
+        {% for message in messages %}
+            {% if message.user_id == current_user.id %}
+                {% if message.date_now(message.id, current_user.id) == "Равно" %}
+                    <tr>
+                        <td class="ravno" id="{{ message.id }}">{{ message.id }}</td>
+                        <td class="ravno">
+                            <div class="toggle">
+                                <a class="toggler" href="#">{{ message.text }}</a>
+                                <div class="content">
+                                    <a href="{{ url_for('note_update', note_id=message.id ) }}">
+                                        {{_("Редактировать")}}
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="ravno">{{ message.start_date }}</td>
+                        <td class="ravno">{{ message.end_date }}</td>
+                        <td class="ravno">{{ message.status }}</td>
+                    </tr>
+                 {% elif message.status == "Не сделан" %}
+                    <tr>
+                        <td class="menshe">{{ message.id }}</td>
+                        <td class="menshe">
+                            <div class="toggle">
+                                <a class="toggler" href="#">{{ message.text }}</a>
+                                <div class="content">
+                                    <a href="{{ url_for('note_update', note_id=message.id ) }}">
+                                        {{_("Редактировать")}}
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="menshe">{{ message.start_date }}</td>
+                        <td class="menshe">{{ message.end_date }}</td>
+                        <td class="menshe">{{ message.status }}</td>
+                    </tr>
+                {% elif message.status == "Сделан" %}
+                    <tr>
+                        <td class="sdelan">{{ message.id }}</td>
+                        <td class="sdelan">
+                            <div class="toggle">
+                                <a class="toggler" href="#">{{ message.text }}</a>
+                                <div class="content">
+                                    <a href="{{ url_for('note_update', note_id=message.id ) }}">
+                                        {{_("Редактировать")}}
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="sdelan">{{ message.start_date }}</td>
+                        <td class="sdelan">{{ message.end_date }}</td>
+                        <td class="sdelan">{{ message.status }}</td>
+                    </tr>
+                 {% elif message.date_now(message.id, current_user.id) == "Больше" %}
+                   <tr>
+                        <td class="bolshe">{{ message.id }}</td>
+                        <td class="bolshe">
+                            <div class="toggle">
+                                 <a class="toggler" href="#">{{ message.text }}</a>
+                                <div class="content">
+                                    <a href="{{ url_for('note_update', note_id=message.id ) }}">
+                                        {{_("Редактировать")}}
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="bolshe">{{ message.start_date }}</td>
+                        <td class="bolshe">{{ message.end_date }}</td>
+                        <td class="bolshe">{{ message.status }}</td>
+                    </tr>
+                {% endif %}
+            {% endif %}
+    {% endfor %}
+    </table>
+</form>
+    <script src="{{ url_for("static", filename="js/update_page.js") }}"></script>
+{% endblock %}

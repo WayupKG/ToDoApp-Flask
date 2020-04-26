@@ -1,0 +1,94 @@
+.profi_grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.menu_list_profi {
+    text-align: center;
+}
+.menu_list_profi h3 {
+    margin-top: -5px;
+}
+
+.menu_list_profi img {
+    width: 150px;
+    height: 150px;
+}
+
+.menu_list_profi span {
+    display: block;
+    margin: 15px 0;
+    border-bottom: 2px solid silver;
+    transition: border-bottom-color 0.5s;
+}
+
+.menu_list_profi span a {
+    text-decoration: none;
+    color: #562E70;
+    font-size: 18px;
+    transition: color  0.5s ;
+}
+
+.menu_list_profi:hover span {
+    border-bottom: 2px solid #4CD984;
+}
+
+.menu_list_profi:hover span:hover {
+    border-bottom: 2px solid #562E70;
+}
+.menu_list_profi:hover span:hover a {
+    color:  #000;
+}
+
+
+/* block 2 -------------------------------------------------*/
+
+#h1 {
+    margin: 0;
+}
+
+.login_block {
+    height: 85%;
+}
+
+.block_login {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.table {
+    text-align: center;
+    margin: auto;
+}
+
+input[type=text], input[type=password] {
+    width: 350px;
+    font-size: 20px;
+    color: #562E70;
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-bottom: 2px solid #562E70;
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.btn_post {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+textarea {
+    width: 370px;
+    height: 100px;
+    padding: 12px 10px;
+    font-size: 20px;
+    color: #562E70;
+    resize: none;
+    border: none;
+    border-bottom: 2px solid #562E70;
+}

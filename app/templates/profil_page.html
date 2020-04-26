@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel = "stylesheet" href = "{{ url_for("static", filename="css/profil_page.css") }}">
+    {% block profil_link %}{% endblock %}
+{% endblock %}
+
+{% block title %} {{_("Профиль")}} {% endblock %}
+
+{% block content %}
+
+<main class="profi">
+    <div class="container">
+        <div class="profi_grid">
+            <div class="menu_list_profi">
+                <img src="{{ current_user.avatar }}" alt="avatar">
+                    <h3>{{ current_user.first_name }} {{ current_user.last_name  }}</h3>
+                <p>{{ current_user.status }}</p>
+
+                <span>
+                    <a href="{{ url_for('my_data_profil', username=current_user.username) }}">
+                        {{_("Мои данные")}}
+                    </a>
+                </span>
+                <span>
+                    <a href="{{ url_for('all_notes_profil', username=current_user.username) }}">
+                        {{_("Все заметки")}}
+                    </a>
+                </span>
+                <span>
+                    <a href="{{ url_for('profil_did', username=current_user.username) }}">
+                        {{_("Сделанные")}} > {{ note.did('Сделан', current_user.id) }}
+                    </a>
+                </span>
+                <span>
+                    <a href="{{ url_for('profil_work', username=current_user.username) }}">
+                        {{_("Работаю")}} >
+                    </a>
+                </span>
+                <span>
+                    <a href="{{ url_for('profil_pending', username=current_user.username) }}">
+                        {{_("В Ожидании")}}
+                    </a>
+                </span>
+                <span>
+                    <a href="{{ url_for('profil_not_done', username=current_user.username) }}">
+                        {{_("Не сделанные")}}
+                    </a>
+                </span>
+                <span>
+                    <a href="{{ url_for('profil_users', username=current_user.username) }}">
+                        {{_("Пользователи")}}
+                    </a>
+                </span>
+                <span>
+                    <a href="">
+                        {{_("Редактировать")}}
+                    </a>
+                </span>
+            </div>
+            <div class="linta">
+                {% block profil_content %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

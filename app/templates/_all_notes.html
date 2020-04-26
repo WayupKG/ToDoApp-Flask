@@ -1,0 +1,61 @@
+{% extends 'profil_page.html' %}
+
+{% block profil_link %}
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/_all_notes.css") }}">
+{% endblock %}
+
+
+{% block profil_content %}
+    <h1 class="h1" id="h1">{{ _("Все заметки") }}</h1>
+    <hr>
+<form method="post" class="all_note_form">
+    <table class="all_note_table">
+        <tr>
+            <th class="id_note"><span>{{ _('ID') }}</span></th>
+            <th class="name_text"><span>{{ _('Наимование') }}</span></th>
+            <th class="data"><span>{{ _('Создан') }}</span></th>
+            <th class="data"><span>{{ _('Срок') }}</span></th>
+            <th class="stst"><span>{{ _('Статус') }}</span></th>
+        </tr>
+
+        {% for message in messages %}
+            {% if message.user_id == current_user.id %}
+                {% if message.date_now(message.id, current_user.id) == "Равно" %}
+                    <tr>
+                        <td class="ravno" id="{{ message.id }}">{{ message.id }}</td>
+                        <td class="ravno">{{ message.text }}</td>
+                        <td class="ravno">{{ message.start_date }}</td>
+                        <td class="ravno">{{ message.end_date }}</td>
+                        <td class="ravno">{{ message.status }}</td>
+                    </tr>
+                 {% elif message.status == "Не сделан" %}
+                    <tr>
+                        <td class="menshe">{{ message.id }}</td>
+                        <td class="menshe">{{ message.text }}</td>
+                        <td class="menshe">{{ message.start_date }}</td>
+                        <td class="menshe">{{ message.end_date }}</td>
+                        <td class="menshe">{{ message.status }}</td>
+                    </tr>
+                {% elif message.status == "Сделан" %}
+                    <tr>
+                        <td class="sdelan">{{ message.id }}</td>
+                        <td class="sdelan">{{ message.text }}</td>
+                        <td class="sdelan">{{ message.start_date }}</td>
+                        <td class="sdelan">{{ message.end_date }}</td>
+                        <td class="sdelan">{{ message.status }}</td>
+                    </tr>
+                 {% elif message.date_now(message.id, current_user.id) == "Больше" %}
+                   <tr>
+                        <td class="bolshe">{{ message.id }}</td>
+                        <td class="bolshe">{{ message.text }}</td>
+                        <td class="bolshe">{{ message.start_date }}</td>
+                        <td class="bolshe">{{ message.end_date }}</td>
+                        <td class="bolshe">{{ message.status }}</td>
+                    </tr>
+                {% endif %}
+            {% endif %}
+    {% endfor %}
+    </table>
+</form>
+
+{% endblock %}

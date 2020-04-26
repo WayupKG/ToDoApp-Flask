@@ -1,0 +1,40 @@
+.div_grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.profil {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.avatar img {
+    width: 200px;
+    height: 200px;
+}
+
+.info {
+    padding-left: 20px;
+}
+
+.QR {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.QR img {
+    width: 150px;
+    height: 150px;
+}
+
+.Achievements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.block1 img {
+    width: 100%;
+    height: 100%;
+}

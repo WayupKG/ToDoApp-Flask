@@ -1,0 +1,73 @@
+.table {
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
+}
+form {
+    text-align: center;
+    margin-bottom: 80px;
+}
+/*table td:nth-child(правило отбора столбцов)*/
+
+tr, td, th {
+    border: 1px solid #562E70; /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+}
+th {
+    background-color: #4CD984;
+    padding: 10px 10px;
+}
+td {
+    padding: 10px;
+}
+/*.ravno {*/
+/*    background-color: #4CD984 !important;*/
+/*    color: #000 !important;*/
+/*}*/
+
+.sdelan {
+    background-color: #55ff2b96;
+}
+
+
+
+.menshe {
+    background-color: #ff6e6e !important;
+    color: #fff !important;
+}
+
+.menshe a {
+    color: #fff;
+}
+
+
+.bolshe {
+
+}
+
+.toggler {
+    color: #562E70;
+    text-decoration: none;
+}
+
+
+/*tr:nth-child(2n) {*/
+/*    background: #b5ffd1;*/
+/*}*/
+
+.note_list_update {
+    /*margin-top: 30px;*/
+}
+
+.id_note {
+    width: 2% !important;
+}
+.name_text {
+    width: 45%;
+}
+.data {
+    width: 10%;
+}
+.stst {
+    width: 15%;
+}

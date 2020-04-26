@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block link %}
+    <link rel = "stylesheet" href = "../static/css/index.css">
+{% endblock %}
+
+{% block title %}
+    {{_("Главная")}}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="main">
+    <div class="container">
+        <div class="section">
+            <div class="block1">
+                <h1>
+                    {{ _('Коди Руй') }}
+                </h1>
+                <p>
+                    {{ _('Я работаю, работаю и работы не боюсь, если правый бок устанет - я на левый повернусь!') }}
+                </p>
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('note_page') }}" class="sumbit_link">{{ _('Мои заметки') }}</a>
+            {% else %}
+                <a href="{{ url_for('register') }}" class="sumbit_link">{{ _('Регистрация') }}</a>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+.users {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.users div {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.users div p {
+    margin: 0;
+    padding: 0;
+}
+
+.users div a {
+    text-decoration: none;
+    color: #562E70;
+}

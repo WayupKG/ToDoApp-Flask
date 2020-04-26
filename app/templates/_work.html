@@ -1,0 +1,37 @@
+{% extends 'profil_page.html' %}
+
+{% block profil_link %}
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/_all_notes.css") }}">
+{% endblock %}
+
+
+{% block profil_content %}
+    <h1 class="h1" id="h1">{{_("Работаю")}}</h1>
+    <hr>
+<form method="post" class="all_note_form">
+    <table class="all_note_table">
+        <tr>
+            <th class="id_note"><span>{{ _('ID') }}</span></th>
+            <th class="name_text"><span>{{ _('Наимование') }}</span></th>
+            <th class="data"><span>{{ _('Создан') }}</span></th>
+            <th class="data"><span>{{ _('Срок') }}</span></th>
+            <th class="stst"><span>{{ _('Статус') }}</span></th>
+        </tr>
+
+        {% for message in messages %}
+            {% if message.user_id == current_user.id %}
+                {% if message.status == "Работаю" %}
+                    <tr>
+                        <td>{{ message.id }}</td>
+                        <td>{{ message.text }}</td>
+                        <td>{{ message.start_date }}</td>
+                        <td>{{ message.end_date }}</td>
+                        <td>{{ message.status }}</td>
+                    </tr>
+                {% endif %}
+            {% endif %}
+    {% endfor %}
+    </table>
+</form>
+
+{% endblock %}

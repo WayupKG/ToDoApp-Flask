@@ -1,0 +1,44 @@
+.all_note_form {
+    text-align: center;
+    font-size: 14px;
+}
+
+.all_note_table {
+    width: 100%;
+}
+
+tr, td, th {
+    border: 1px solid #fff; /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+}
+th {
+    background-color: #4CD984;
+    padding: 10px 10px;
+}
+td {
+    padding: 10px;
+}
+.ravno {
+    background-color: #4CD984 !important;
+    color: #000 !important;
+}
+.menshe {
+    background-color: #ff6e6e !important;
+    color: #fff !important;
+}
+
+tr:nth-child(2n) {
+    background: #b5ffd1;
+}
+
+.id_note {
+    width: 2% !important;
+}
+.name_text {
+    width: 45%;
+}
+.data {
+    width: 10%;
+}
+.stst {
+    width: 15%;
+}

@@ -1,0 +1,47 @@
+
+{% extends 'profil_page.html' %}
+
+{% block profil_content %}
+
+<div class="my_data">
+    <h1 class="h1" id="h1">{{_("Мои данные")}}</h1>
+    <hr>
+    <form method="POST">
+        <table class="table">
+            <tr>
+                <td><input type="text" name="first_name" class="fist_name" placeholder="Имя" value="{{ current_user.first_name }}"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="last_name" class="last_name" placeholder="Фамилия" value="{{ current_user.last_name }}"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="email" class="Email" placeholder="Email" value="{{ current_user.email }}"></td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="status" cols="40" rows="3" >{{ current_user.status }}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="{{_("Обновить")}}" name="update_btn" id="45827" class="sumbit_link btn_post">
+                </td>
+                <tr>
+                    <td>
+                        {% with messages = get_flashed_messages() %}
+                          {% if messages %}
+                            <ul class=flashes>
+                            {% for message in messages %}
+                              <li>{{ message }}</li>
+                            {% endfor %}
+                            </ul>
+                          {% endif %}
+                        {% endwith %}
+                        {% block body %}{% endblock %}
+                    </td>
+                </tr>
+        </table>
+    </form>
+
+</div>
+{% endblock %}
