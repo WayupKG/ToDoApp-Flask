@@ -13,7 +13,7 @@ image==1.5.28
 itsdangerous==1.1.0
 Jinja2==2.11.1
 MarkupSafe==1.1.1
-Pillow==7.1.1
+Pillow==9.0.0
 pkg-resources==0.0.0
 PyJWT==1.7.1
 pytz==2019.3
